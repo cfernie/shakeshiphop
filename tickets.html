@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title> Shakes Hip Hop</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Shakes Hip Hop"/> 
+        <meta name="author" content="Charlotte Fernie"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" href="css/master.css"/>
+        <link type="text/css" rel="stylesheet" href="css/menu.css"/>
+        <link type="text/css" rel="stylesheet" href="css/carousel.css"/>
+        <link type="text/css" rel="stylesheet" href="css/socialmediaicons.css"/>
+        <link type="text/css" rel="stylesheet" href="css/imagehovers.css"/>
+        <!-- <link type="text/css" rel="stylesheet" href="css/radiobuttons.css"/> -->
+        <!-- Google Map API key -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" defer></script>
+        <!-- Font Awesome Icon Library for review stars and burger icon--> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                const uluru = { lat:53.3448792 , lng:-6.2673575};  
+                // The map, centered at Uluru
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 16,
+                    center: uluru,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+            }
+
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    
+    </head>
+
+    <body>    
+        <div id="main-container">
+            <div id="topbar-container">
+                <div id="logo-div">
+                    <img src="images_links/PNG/Logo_navbar_BW.png" alt="This is a logo icon" width="50px"></img>    
+                </div>
+                <div id="menu-div">
+                     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+                    <div class="topnav" id="myTopnav">
+                        <a href="index.html" >Home</a>
+                        <a href="tickets.html" class="active">Tickets</a>
+                        <a href="faq.html">Info</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                    <!-- https://www.w3schools.com/howto/howto_css_custom_checkbox.asp -->
+                    <div id="tickets-container">
+                        <h1 class="maintitle" style="width:100%;color:white;"> Tickets</h1>
+
+                        <div class="wrapcolumn ticketcolumn">
+                            <h2 class="darktitletickets">Select a date</h2>
+                                <label>July 25th, 2021
+                                <input type="radio" checked="checked" name="radio">
+                                </label>
+                                <br/>
+                                <label>July 26th, 2021
+                                <input type="radio" name="radio">
+                                </label>
+                                <br/>
+                                <label>July 27th, 2021
+                                <input type="radio" name="radio">
+                            </label>
+                        </div>  
+                        <div class="wrapcolumn ticketcolumn" style="">
+                            <h2 class="darktitletickets">Ticket Quantity</h2>
+                            
+                            <form>
+                                <input type="text" id="fname" name="fname" maxlength="2" style="width:50px">
+                            </form>
+                        </div>
+                            <div class=buttoncontainer>
+                            <a href="thankyou.html"><button class="rjbutton rjbuttonlight">Book Tickets</button></a>
+                        </div>
+                            
+                    </div>
+
+
+
+                    <div id="map-container">
+
+                        <div class="wrapcolumn">
+                            <p class="mapaddress"><strong>Address:</strong> Meeting House Square, Temple Bar, D2</p>
+                            <p class="mapaddress"><strong>Phone:</strong> + 353 1 677 0000 </p>
+                            <button class="rjbutton rjbuttonlight mapbutton">Email Us</button>
+                            <br/>
+                            <button class="rjbutton rjbuttonlight mapbutton">FAQ</button>
+                        </div>
+        
+                        <div class="wrapcolumn">
+                            <div id="map"></div> 
+                            <!-- https://developers.google.com/maps/documentation/javascript/adding-a-google-map -->
+                            <!-- https://jsfiddle.net/api/post/library/pure/ -->
+                        </div>
+        
+                    </div>
+
+            <div id="contact-container">
+                <h2 class="darktitle">Stay in Touch</h2>
+                <p class="centered">Sign up and get updates about new musical productions</p>
+                <div> 
+                    <button class="rjbutton rjbuttondark">Subscribe</button> 
+                </div>
+            </div>
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons -->
+            <div  id="socialmedia-container">
+                <div id="socialmedia-centered">
+                    <a href="www.instagram.com" class="fa fasocial fa-instagram"></a>
+                
+                    <a href="www.facebook.com" class="fa fasocial fa-facebook"></a>
+                
+                    <a href="www.twitter.com" class="fa fasocial fa-twitter"></a>
+                
+                    <a href="www.youtube.com" class="fa fasocial fa-youtube"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="js/carousel.js"></script>
+        <script src="js/imagefade.js"></script>
+    </body>
+
+
+</html>
+
+

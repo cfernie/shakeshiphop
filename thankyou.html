@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title> Shakes Hip Hop</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Shakes Hip Hop"/> 
+        <meta name="author" content="Charlotte Fernie"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" href="css/master.css"/>
+        <link type="text/css" rel="stylesheet" href="css/menu.css"/>
+        <link type="text/css" rel="stylesheet" href="css/carousel.css"/>
+        <link type="text/css" rel="stylesheet" href="css/socialmediaicons.css"/>
+        <link type="text/css" rel="stylesheet" href="css/imagehovers.css"/>
+        <link type="text/css" rel="stylesheet" href="css/radiobuttons.css"/>
+        <!-- Google Map API key -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" defer></script>
+        <!-- Font Awesome Icon Library for review stars and burger icon--> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       
+        <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                const uluru = { lat:53.3448792 , lng:-6.2673575};  
+                // The map, centered at Uluru
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 16,
+                    center: uluru,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+            }
+
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    
+    </head>
+
+    <body>    
+        <div id="main-container">
+            <div id="topbar-container">
+                <div id="logo-div">
+                    <img src="images_links/PNG/Logo_navbar_BW.png" alt="This is a logo icon" width="50px"></img>    
+                </div>
+                <div id="menu-div">
+                     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+                    <div class="topnav" id="myTopnav">
+                        <a href="index.html" >Home</a>
+                        <a href="tickets.html" class="active">Tickets</a>
+                        <a href="faq.html">Info</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="thankyou-container">
+                <h1 class="maintitle" style="width:100%;text-align:center;color:white;"> Thank you!</h1>
+                <div class="wrapcolumn">
+                    <p> You  are going to Shakes Hip Hop performance of Romeo & Juliet.</p>
+                </div>
+                <div class="wrapcolumn" style="background-color:white;color:black;">
+                    <p>Order details:</p>
+                    <ul class="a">
+                        <li>Show: Romeo and Juliet</li>
+                        <li>Ticket Quantity: 2</li>
+                        <li>Date: 25th July 2021 at 8pm</li>
+                        <li>€40.00 </li>
+                    </ul>
+                </div>
+                <div class=wrapcolumn>
+                    <p> A receipt of payment and a copy of your tickets will be sent to the email address you provided.</p>
+                </div>
+            </div>
+
+            <div id="map-container">
+
+                <div class="wrapcolumn">
+                    <div id="mapleftaddresslabels">
+                    <p class="mapaddress"><strong>Address:</strong> Meeting House Square, Temple Bar, D2</p>
+                    </div> 
+                    <div id="mapleftaddresslabels">
+                        <p class="mapaddress"><strong>Phone:</strong> + 353 1 677 0000 </p>
+                    </div>
+                    <div id="mapleftbuttons">
+                        <button class="rjbutton rjbuttonlight">Email Us</button>
+                    </div>
+                    <div id="mapleftbuttons">
+                        <button class="rjbutton rjbuttonlight">FAQ</button>
+                    </div>
+                </div>
+
+                <div class="wrapcolumn">
+                    <div id="map"></div> 
+                    <!-- https://developers.google.com/maps/documentation/javascript/adding-a-google-map -->
+                    <!-- https://jsfiddle.net/api/post/library/pure/ -->
+                </div>
+            </div>
+
+            <div id="contact-container">
+                <h2 class="darktitle">Stay in Touch</h2>
+                <p class="centered">Sign up and get updates about new musical productions</p>
+                <div> 
+                    <button class="rjbutton rjbuttondark">Subscribe</button> 
+                </div>
+            </div>
+            
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons -->
+            <div  id="socialmedia-container">
+                <div id="socialmedia-centered">
+                    <a href="www.instagram.com" class="fa fasocial fa-instagram"></a>
+                
+                    <a href="www.facebook.com" class="fa fasocial fa-facebook"></a>
+                
+                    <a href="www.twitter.com" class="fa fasocial fa-twitter"></a>
+                
+                    <a href="www.youtube.com" class="fa fasocial fa-youtube"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="js/carousel.js"></script>
+        <script src="js/imagefade.js"></script>
+    </body>
+
+
+</html>
+
+
